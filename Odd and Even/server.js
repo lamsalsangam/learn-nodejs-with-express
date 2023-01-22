@@ -18,12 +18,22 @@ app.post('/', function (req, res) {
       odd_num.push(i)
     }
   }
-  //   function functionEven(item, index) {
-  //     return `${index + 1} : ${item} <br/>`
-  //   }
+
+  even_nums = ''
+  odd_nums = ''
+  function functionEven(item, index) {
+    // return `${index + 1} : ${item} <br/>`
+    even_nums += '<br/>' + item
+  }
+  function functionOdd(item, index) {
+    // return `${index + 1} : ${item} <br/>`
+    odd_nums += '<br/>' + item
+  }
   //   res.send(`${even_num.forEach(functionEven)}`)
+  even_num.forEach(functionEven)
+  odd_num.forEach(functionOdd)
   res.send(
-    `Even Number are: ${even_num}.<br><br><br>Odd Number are: ${odd_num}`
+    `Even Number are: ${even_nums}.<br><br><br>Odd Number are: ${odd_nums}`
   )
 })
 
